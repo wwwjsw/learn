@@ -1,23 +1,15 @@
 Java Learn
 ====================
 
-Carregamento de memoria, array e listas #1
+1 → Carregamento de memoria, array e listas
 ---------------------
 
-> Variaveis cujo o tipo são classes
-> não devem ser entendidas como
-> caixas mas sim como ponteiros
-> para a memoria.
+> Variaveis cujo o tipo são classes não devem ser entendidas como caixas mas sim como ponteiros para a memoria.
 
 ![memory_ref](/MEMORY-REFERENCE.png "Memory ref")
 
-The quick brown fox jumped over the lazy
-dog's back.
+> Variaveis baseadas em em classes referenciam a um endereço de memoria.
 
-### Header 3
-
-> This is a blockquote.
-> 
-> This is the second paragraph in the blockquote.
->
-> ## This is an H2 in a blockquote
+###  1.1 → Tipos primitivos são tipos valor.
+> Tipos primitivos de valor em Java, tipos primitivos são tipos valor, tipos valor são caixas e nao ponteiros para a memoria.
+![memory_ref](/MEMORY-REFERENCE2.png "Memory ref2")
