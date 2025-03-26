@@ -6,14 +6,14 @@ Java Learn
 
 > Variaveis cujo o tipo são classes não devem ser entendidas como caixas mas sim como ponteiros para a memoria.
 
-![memory_ref](/MEMORY-REFERENCE.png "Memory ref")
+![memory_ref](MEMORY-REFERENCE.png "Memory ref")
 
 > Variaveis baseadas em em classes referenciam a um endereço de memoria.
 
 ###  1.1 → Tipos primitivos são tipos valor.
 > Tipos primitivos de valor em Java, tipos primitivos são tipos valor, tipos valor são caixas e nao ponteiros para a memoria.
 
-![memory_ref](/MEMORY-REFERENCE2.png "Memory ref2")
+![memory_ref](MEMORY-REFERENCE2.png "Memory ref2")
 
 > Se ``` y = x ``` então se cria uma copia do valor da variavel ``` y = 10``` .
 
@@ -39,7 +39,7 @@ Java Learn
 Product p = new Product();
 ```
 
-![memory_ref](/MEMORY-REFERENCE3.png "Memory ref3")
+![memory_ref](MEMORY-REFERENCE3.png "Memory ref3")
 
 ### 1.3 Tipos referência vs. tipos valor
 
@@ -54,7 +54,7 @@ Product p = new Product();
 | Objetos não utilizados são desalocados em um momento próximo pelo garbage collector | Objetos são desalocados imediatamente quando seu escopo de execução é finalizado.
 
 > EX:
-> ![memory_ref](/MEMORY-REFERENCE4.png "Memory ref4")
+> ![memory_ref](MEMORY-REFERENCE4.png "Memory ref4")
 > neste exemplo mesmo ```p``` sendo uma variável de escopo ela utiliza de uma referencia em memoria para lidar com os dados. 
 
 # 2 → Vetores
