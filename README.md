@@ -98,5 +98,51 @@ Product p = new Product();
     }
 ```
 
-# 3 → Box, unboxing e wrapper classes
+# 3 → Boxing, unboxing e wrapper classes
 ---------------------
+
+### 3.1 → Boxing
+
+> É o processo de conversão de um objeto tipo valor para um objeto tipo referência compatível.
+
+
+```Java
+    int x = 20;
+    Object obj = x; // <- boxing
+```
+
+> Visualmente: 
+
+> ![memory_ref5](img/MEMORY-REFERENCE5.png)
+
+### 3.2 → Unboxing
+
+> É um processo de conversão de um objeto tipo referência para um objeto tipo valor compatível
+
+```Java
+    int x = 20;
+    Object obj = x;
+    int y = (int) obj; // <- unboxing
+```
+
+### 3.3 → Wrapper class
+
+> São classes equivalentes aos tipos primitivos
+
+> Serve para fornecer boxing e unboxing natural a linguagem
+
+> Uso comum: campos de entidades em sistemas de informação
+
+> Pois tipos referencia(classes) aceitam valor null e usufruem dos recursos OO
+
+> ![memory_ref5](img/MEMORY-REFERENCE6.png)
+
+> Uso em codigo:
+
+```Java
+    public class Product {
+        public String name;
+        public Double price;
+        public Integer quantity;
+    (...)
+```
