@@ -9,7 +9,7 @@ Carregamento de memoria, array e listas #1
 > caixas mas sim como ponteiros
 > para a memoria.
 
-[http://](teete)
+![memory_ref](/MEMORY-REFERENCE.png "Memory ref")
 
 The quick brown fox jumped over the lazy
 dog's back.
