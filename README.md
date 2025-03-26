@@ -140,9 +140,36 @@ Product p = new Product();
 > Uso em codigo:
 
 ```Java
-    public class Product {
-        public String name;
-        public Double price;
-        public Integer quantity;
+Integer quantity = 10; // <- tipo classe
+int packQuantity = quantity * 2; // <- tipo primitivo
+(...)
+```
+
+```Java
+public class Product {
+    public String name;
+    public Double price;
+    public Integer quantity;
     (...)
+}
+```
+
+### 4 → Laço for each
+
+> Percorre elementos de um vetor.
+
+> Exemplo de codigo:
+
+```Java
+    public static void main(String[] args) {
+        String[] vect = new String[] {"Maria", "Bob", "Alex"};
+
+        for (int i=0; i<vect.length; i++) { // for comum
+            System.out.println(vect[i]);
+        }
+        
+        for (String obj: vect) { // for each
+            System.out.println(obj);
+        }
+    }
 ```
