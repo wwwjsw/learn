@@ -25,7 +25,7 @@ Java Learn
 ![java_logo](img/java_logo.webp)
 
 
-# 1 → Carregamento de memoria, array e listas
+# 1 Carregamento de memoria, array e listas
 ---------------------
 
 > Variaveis cujo o tipo são classes não devem ser entendidas como caixas mas sim como ponteiros para a memoria.
@@ -34,14 +34,14 @@ Java Learn
 
 > Variaveis baseadas em em classes referenciam a um endereço de memoria.
 
-###  1.1 → Tipos primitivos são tipos valor.
+###  1.1 Tipos primitivos são tipos valor.
 > Tipos primitivos de valor em Java, tipos primitivos são tipos valor, tipos valor são caixas e nao ponteiros para a memoria.
 
 ![memory_ref2](img/MEMORY-REFERENCE2.png)
 
 > Se ``` y = x ``` então se cria uma copia do valor da variavel ``` y = 10``` .
 
-### 1.2 → Tipos primitivos do Java
+### 1.2 Tipos primitivos do Java
 
 | Type     |    contains        | default   | size
 | -------- |    --------        | -------   | ----
@@ -55,7 +55,7 @@ Java Learn
 | double   | floating point     |  0.0      |  64 bits
 
 
-### 1.3 → Valores padrão
+### 1.3 Valores padrão
 
 > Quando alocamos New() ou qualquer dado estruturado (classe ou array) se assume valores padrão para seus elementos.
 
@@ -65,7 +65,7 @@ Product p = new Product();
 
 ![memory_ref3](img/MEMORY-REFERENCE3.png)
 
-### 1.3 Tipos referência vs. tipos valor
+### 1.4 Tipos referência vs. tipos valor
 
 | classe | tipo primitivo
 | ---  | ---
@@ -81,7 +81,7 @@ Product p = new Product();
 > ![memory_ref4](img/MEMORY-REFERENCE4.png)
 > neste exemplo mesmo ```p``` sendo uma variável de escopo ela utiliza de uma referencia em memoria para lidar com os dados. 
 
-# 2 → Vetores
+# 2 Vetores
 ---------------------
 
 > Em programação, "vetor" é o nome dado a arranjos unidimensionais
@@ -122,10 +122,10 @@ Product p = new Product();
     }
 ```
 
-# 3 → Boxing, unboxing e wrapper classes
+# 3 Boxing, unboxing e wrapper classes
 ---------------------
 
-### 3.1 → Boxing
+### 3.1 Boxing
 
 > É o processo de conversão de um objeto tipo valor para um objeto tipo referência compatível.
 
@@ -139,7 +139,7 @@ Product p = new Product();
 
 > ![memory_ref5](img/MEMORY-REFERENCE5.png)
 
-### 3.2 → Unboxing
+### 3.2 Unboxing
 
 > É um processo de conversão de um objeto tipo referência para um objeto tipo valor compatível
 
@@ -149,7 +149,7 @@ Product p = new Product();
     int y = (int) obj; // <- unboxing
 ```
 
-### 3.3 → Wrapper class
+### 3.3 Wrapper class
 
 > São classes equivalentes aos tipos primitivos
 
@@ -178,7 +178,7 @@ public class Product {
 }
 ```
 
-### 4 → Laço for each
+### 4 Laço for each
 
 > Percorre elementos de um vetor.
 
@@ -198,7 +198,7 @@ public class Product {
     }
 ```
 
-### 5 → Listas
+### 5 Listas
 
 - Lista é uma estrutura de dados:
   - Homogênea(dados do mesmo tipo)
@@ -280,7 +280,7 @@ public class Main {
 }
 ```
 
-### 6 → Matrizes
+### 6 Matrizes
 
 > Em programação "matriz" é o nome dado a arranjos bidimensionais (vetor de vetores)
 
