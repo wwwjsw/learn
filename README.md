@@ -173,3 +173,85 @@ public class Product {
         }
     }
 ```
+
+### 5 → Listas
+
+- Lista é uma estrutura de dados:
+ - Homogênea(dados do mesmo tipo)
+ - Ordenada (elementos acessados por meio de posições)
+ - Inicia vazia, e seus elementos são alocados sob demanda
+ - Cada elemento ocupa um 'nó' (ou nodo) da lista
+
+- Tipo (interface): List
+- Classes que implementam: ArrayList, LinkedList, etc
+
+- Vantagens:
+ - Tamanho variável
+ - Facilidade para se realizar inserções e deleções
+- Descantagens:
+ - Acesso sequencial aos elementos
+
+> Operações de lista
+
+> Tamanho da lista: ```size()```
+
+> Inserir elemento na lista: ```add(obj), add(int, obj)```
+
+> Remover elementos da lista: ```remove(obj), remove(int), removeIf(Predicate)```
+
+> Encontrar posição de elemento: ```indexOf(obj), lastIndexOf(obj)```
+
+> Filtrar lista com base em predicado: ```List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());```
+
+> Encontrar primeira ocorrencia com base em predicado: ```Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);```
+
+#### Exemplo
+
+```Java
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // Declara a lista.
+        List<String> list = new ArrayList<>(); 
+
+        // Adiciona itens à lista.
+        list.add("Maria");
+        list.add("Alex");
+        list.add("Bob");
+        list.add("Anna");
+        list.add(2, "Marco");
+
+        // mostrar comprimento de uma lista
+        System.out.println("--- comprimento da lista: --- \n" + list.size() + "\n");
+
+        System.out.println("--- itens da lista ---");
+        for (String x: list) {
+            System.out.print(x + "\n");
+        }
+
+        System.out.println("\n--- itens da lista sem os nomes que iniciam com M ---");
+        // list.remove(1); (remove por posição de index)
+        list.removeIf(x -> x.charAt(0) == 'M');
+        for (String x: list) {
+            System.out.print(x + "\n");
+            
+        }
+        System.out.println("\n--- obter index de itens ---");
+        System.out.println("Index of Bob: " + list.indexOf("Bob"));
+        System.out.println("Index of Marco: " + list.indexOf("Marco") + "\n");
+        
+        System.out.println("--- Filtrar itens da lista que inciem com o caracter A ---");
+        List<String> result = list.stream().filter(x -> x.charAt(0) == 'A').collect(Collectors.toList());
+        
+        for (String x: result) {
+            System.out.println(x);
+        }
+        
+        System.out.println("\n --- Obter o primeiro item de um filtro de lista ---");
+        String name = list.stream().filter(x -> x.charAt(0) == 'A').findFirst().orElse(null);
+        System.out.println(name);
+    }
+}
+```
