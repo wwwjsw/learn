@@ -255,3 +255,73 @@ public class Main {
     }
 }
 ```
+
+### 6 → Matrizes
+
+> Em programação "matriz" é o nome dado a arranjos bidimensionais (vetor de vetores)
+
+> homogênea, ordenada e armazenada de uma só vez no bloco de memoria
+
+> ![memory_ref7](img/MEMORY-REFERENCE7.png)
+
+> EXEMPLO DE CODIGO:
+
+```Java
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    /*
+      Entrada de dados para teste do metodo
+      3
+      5 -3 10
+      15 8 2
+      7 9 -4
+    */
+    public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		int[][] mat = new int[n][n];
+		/*
+		  Até este ponto de execução existe apenas a declaração da matriz
+		  - | 0 | 1 | 2
+		  0 | 0 | 0 | 0
+		  1 | 0 | 0 | 0
+		  2 | 0 | 0 | 0
+		*/
+		System.out.println("inicializa a matriz em memoria");
+		String numeroConta = Arrays.deepToString(mat);
+		System.out.print(numeroConta);
+		
+		// Preenche a matriz
+		for (int i=0; i<mat.length; i++) { // linhas
+			for (int j=0; j<mat[i].length; j++) { // colunas 
+				mat[i][j] = sc.nextInt();
+			}
+		}
+		
+		// percorre de forma diagonal baseado em indices, 0-0... 1-1... 2-2
+		System.out.println("\nMain diagonal:");
+		for (int i=0; i<mat.length; i++) {
+			System.out.print(mat[i][i] + " ");
+		}
+		System.out.println();
+		
+		// percorre linhas e colunas e indica quantas são menores que 0
+		int count = 0;
+		for (int i=0; i<mat.length; i++) {
+			for (int j=0; j<mat[i].length; j++) {
+				if (mat[i][j] < 0) {
+					count++;
+				}
+			}
+		}
+		System.out.println("Negative numbers = " + count);
+		
+		
+		sc.close();
+	}
+}
+```
