@@ -2,7 +2,8 @@ Java Learn
 ====================
 # Índice
 
-1. [Carregamento de memória, array e listas](#1--carregamento-de-memoria-array-e-listas)
+1. [Carregamento de memória, array e listas](#1--carregamento-de-memoria-array-e-listas) 
+
    1.1. [Tipos primitivos são tipos valor](#11--tipos-primitivos-sao-tipos-valor)  
    1.2. [Tipos primitivos do Java](#12--tipos-primitivos-do-java)  
    1.3. [Valores padrão](#13--valores-padrao)  
