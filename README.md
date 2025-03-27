@@ -286,7 +286,7 @@ public class Main {
 
 > homogênea, ordenada e armazenada de uma só vez no bloco de memoria
 
-> ![memory_ref7](img/MEMORY-REFERENCE7.png)
+> ![memory_ref7](img/MEMORY-REFERENCE7.PNG)
 
 > EXEMPLO DE CODIGO:
 
