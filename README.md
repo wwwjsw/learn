@@ -157,7 +157,7 @@ public class Product {
 }
 ```
 
-### 4 Laço for each
+# 4 Laço for each
 
 > Percorre elementos de um vetor.
 
@@ -177,7 +177,7 @@ public class Product {
     }
 ```
 
-### 5 Listas
+# 5 Listas
 
 - Lista é uma estrutura de dados:
   - Homogênea(dados do mesmo tipo)
@@ -259,7 +259,7 @@ public class Main {
 }
 ```
 
-### 6 Matrizes
+# 6 Matrizes
 
 > Em programação "matriz" é o nome dado a arranjos bidimensionais (vetor de vetores)
 
@@ -329,7 +329,7 @@ public class Main {
 }
 ```
 
-### 7 Data e Hora
+# 7 Data e Hora
 
 #### 7.1 Tipos de data:
 - data-[hora] local: ano-mês-dia-[hora] sem fuso horário, [hora] é opcional.
