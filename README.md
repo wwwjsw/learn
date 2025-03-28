@@ -331,7 +331,7 @@ public class Main {
 
 # 7 Data e Hora
 
-#### 7.1 Tipos de data:
+## 7.1 Tipos de data:
 - data-[hora] local: ano-mês-dia-[hora] sem fuso horário, [hora] é opcional.
   - Quando o momento local nao interessa a pessoas de outro fuso horário. 
   - Uso comum: sistemas de região única, Excel.
@@ -349,7 +349,7 @@ public class Main {
 
 > ![memory_ref8](img/MEMORY-REFERENCE8.png)
 
-#### 7.2 Timezone (fuso horário)
+## 7.2 Timezone (fuso horário)
 - GMT - Greenwich mean time
   - Horário de Londes (00Z)
   - Horário padrão UTC, tambem chamdo de Z ou Zulu time
@@ -361,7 +361,7 @@ public class Main {
   - "US/Pacific"
   - "America/Sao_Paulo"
 
-#### 7.3 Padrão ISO 8601
+## 7.3 Padrão ISO 8601
 - Data-[hora] local:
   - 2022-07-21
   - 2022-07-21T14:23
