@@ -1,27 +1,5 @@
 Java Learn
 ====================
-# Índice
-
-1. [Carregamento de memória, array e listas](#1--carregamento-de-memoria-array-e-listas) 
-
-   1.1. [Tipos primitivos são tipos valor](#11--tipos-primitivos-sao-tipos-valor)  
-   1.2. [Tipos primitivos do Java](#12--tipos-primitivos-do-java)  
-   1.3. [Valores padrão](#13--valores-padrao)  
-   1.4. [Tipos referência vs. tipos valor](#13-tipos-referencia-vs-tipos-valor)  
-
-2. [Vetores](#2--vetores)
-
-3. [Boxing, unboxing e wrapper classes](#3--boxing-unboxing-e-wrapper-classes)  
-   3.1. [Boxing](#31--boxing)  
-   3.2. [Unboxing](#32--unboxing)  
-   3.3. [Wrapper class](#33--wrapper-class)  
-
-4. [Laço for each](#4--laco-for-each)
-
-5. [Listas](#5--listas)
-
-6. [Matrizes](#6--matrizes)
-
 
 ![java_logo](img/java_logo.webp)
 
@@ -350,3 +328,46 @@ public class Main {
 	}
 }
 ```
+
+### 7 Data e Hora
+
+#### 7.1 Tipos de data:
+- data-[hora] local: ano-mês-dia-[hora] sem fuso horário, [hora] é opcional.
+  - Quando o momento local nao interessa a pessoas de outro fuso horário. 
+  - Uso comum: sistemas de região única, Excel.
+    - Data de nascimento "15/06/2001"
+    - Data-hora da venda: "13/08/2013 às 13:59" 
+
+- data-hora global: ano-mês-dia-hora com fuso horário.
+  - Quando o momento exato interessa a pessoas de outro fuso horário.
+  - Uso comum: sistemas multi-região, web.
+    - Quando será o sorteio? "21/08/2025 às 14h (horario de São Paulo)"
+    - Quando comentario foi publicado? "há 20 minutos"
+
+
+- duração: Tempo decorrido entre duas datas.
+
+> ![memory_ref8](img/MEMORY-REFERENCE8.png)
+
+#### 7.2 Timezone (fuso horário)
+- GMT - Greenwich mean time
+  - Horário de Londes (00Z)
+  - Horário padrão UTC, tambem chamdo de Z ou Zulu time
+- Outros fuso horários são relativos ao GMT/UTC:
+  - São Paulo: GMT-3
+  - Manaus: GMT-4
+  - Portugal: GMT+1
+- Muitas linguages usam nomes para timezones:
+  - "US/Pacific"
+  - "America/Sao_Paulo"
+
+#### 7.3 Padrão ISO 8601
+- Data-[hora] local:
+  - 2022-07-21
+  - 2022-07-21T14:23
+  - 2022-07-21T14:23:59
+  - 2022-07-21T14:23:59.4073
+- Data-hora global:
+  - 2022-07-23T14:52:09Z
+  - 2022-07-23T14:52:09.254935Z
+  - 2022-07-23T14:52:09-03:00
