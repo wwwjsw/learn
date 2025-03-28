@@ -371,3 +371,152 @@ public class Main {
   - 2022-07-23T14:52:09Z
   - 2022-07-23T14:52:09.254935Z
   - 2022-07-23T14:52:09-03:00
+
+
+# 8 Principais tipos de datas em Java
+
+## 8.1. LocalDate 🗓️
+
+### Descrição
+- Representa uma data sem hora ou fuso horário
+- Armazena apenas ano, mês e dia
+- Ideal para datas simples, sem necessidade de horário
+
+### Exemplo de Código
+```java
+// Criando uma LocalDate
+LocalDate hoje = LocalDate.now();
+LocalDate dataEspecifica = LocalDate.of(2024, 3, 28);
+
+// Métodos úteis
+int ano = hoje.getYear();
+Month mes = hoje.getMonth();
+int diaMes = hoje.getDayOfMonth();
+```
+
+### Principais Métodos
+- `now()`: Data atual
+- `of(int ano, int mes, int dia)`: Cria data específica
+- `plusDays()`: Adiciona dias
+- `minusMonths()`: Subtrai meses
+
+## 8.2. LocalTime ⏰
+
+### Descrição
+- Representa um horário sem data ou fuso horário
+- Armazena horas, minutos, segundos e nanosegundos
+- Útil para representar horários isolados
+
+### Exemplo de Código
+```java
+// Criando uma LocalTime
+LocalTime horaAtual = LocalTime.now();
+LocalTime horaEspecifica = LocalTime.of(14, 30, 45);
+
+// Métodos úteis
+int hora = horaAtual.getHour();
+int minuto = horaAtual.getMinute();
+```
+
+### Principais Métodos
+- `now()`: Hora atual
+- `of(int hora, int minuto)`: Cria horário específico
+- `plusHours()`: Adiciona horas
+- `minusMinutes()`: Subtrai minutos
+
+## 8.3. LocalDateTime 📆⏰
+
+### Descrição
+- Combina data e hora sem fuso horário
+- Integra funcionalidades de LocalDate e LocalTime
+- Ideal para registros de eventos e timestamps locais
+
+### Exemplo de Código
+```java
+// Criando uma LocalDateTime
+LocalDateTime dataHoraAtual = LocalDateTime.now();
+LocalDateTime dataHoraEspecifica = LocalDateTime.of(2024, 3, 28, 14, 30);
+
+// Métodos de conversão
+LocalDate data = dataHoraAtual.toLocalDate();
+LocalTime hora = dataHoraAtual.toLocalTime();
+```
+
+### Principais Métodos
+- `now()`: Data e hora atuais
+- `of(...)`: Cria data e hora específicas
+- `format(DateTimeFormatter)`: Formata data
+
+## 8.4. ZonedDateTime 🌐⏰
+
+### Descrição
+- Representa data e hora com informação de fuso horário
+- Lida com complexidades de diferentes zonas temporais
+- Essencial para aplicações internacionais
+
+### Exemplo de Código
+```java
+// Criando ZonedDateTime
+ZonedDateTime dataHoraComFuso = ZonedDateTime.now(ZoneId.of("America/Sao_Paulo"));
+ZoneId zonaEspecifica = ZoneId.of("Europe/London");
+```
+
+### Principais Métodos
+- `now(ZoneId)`: Hora atual em um fuso específico
+- `withZoneSameInstant()`: Converte para outro fuso
+- `getZone()`: Recupera zona temporal
+
+## 8.5. Instant ⏱️
+
+### Descrição
+- Representa um ponto preciso na linha do tempo
+- Baseado em tempo UTC
+- Útil para timestamps e medições de tempo
+
+### Exemplo de Código
+```java
+// Criando Instant
+Instant momentoAtual = Instant.now();
+Instant momentoEspecifico = Instant.parse("2024-03-28T14:30:00Z");
+```
+
+### Principais Métodos
+- `now()`: Timestamp atual
+- `parse()`: Converte string em Instant
+- `plusSeconds()`: Adiciona segundos
+
+## 8.6. Deprecated: java.util.Date 🚫
+
+### Descrição
+- Tipo de data original do Java
+- Considerado obsoleto
+- Mantido por compatibilidade com sistemas legados
+
+### Exemplo de Código
+```java
+// Não recomendado para novos projetos
+Date dataAntiga = new Date();
+```
+
+## 8.7. java.sql.Date 💾
+
+### Descrição
+- Especializado para trabalhar com bancos de dados
+- Representa uma data SQL sem informação de hora
+
+### Exemplo de Código
+```java
+java.sql.Date dataBanco = java.sql.Date.valueOf("2024-03-28");
+```
+
+## 🔑 Boas Práticas
+
+- Prefira sempre as classes do pacote `java.time`
+- Use `DateTimeFormatter` para formatações personalizadas
+- Considere fusos horários em aplicações distribuídas
+- Evite manipular datas com métodos depreciados
+
+## 📚 Referências
+
+- [Java Time API Documentation](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)
+- [Java Date and Time Guide](https://www.baeldung.com/java-8-date-time-intro)
