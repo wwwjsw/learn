@@ -520,3 +520,124 @@ java.sql.Date dataBanco = java.sql.Date.valueOf("2024-03-28");
 
 - [Java Time API Documentation](https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html)
 - [Java Date and Time Guide](https://www.baeldung.com/java-8-date-time-intro)
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+# Conversão de Datas para Texto em Java
+
+## 9. Formatação Básica com DateTimeFormatter
+
+### 9.1 Métodos Padrão de Formatação
+```java
+// Importações necessárias
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+// Formatação de LocalDate
+LocalDate data = LocalDate.now();
+
+// Formatos padrão
+String dataPadrao = data.format(DateTimeFormatter.ISO_LOCAL_DATE);
+// Exemplo: 2024-03-28
+
+String dataFormatada = data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+// Exemplo: 28/03/2024
+```
+
+### 9.2 Formatações Personalizadas
+```java
+// Formatos customizados
+DateTimeFormatter formatadorPersonalizado = DateTimeFormatter.ofPattern("EEEE, dd 'de' MMMM 'de' yyyy");
+String dataExtenso = data.format(formatadorPersonalizado);
+// Exemplo: quinta-feira, 28 de março de 2024
+```
+
+## 9.3. Conversão de LocalDateTime
+
+```java
+LocalDateTime dataHora = LocalDateTime.now();
+
+// Formatações diversas
+String dataHoraCompleta = dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+// Exemplo: 28/03/2024 15:30:45
+
+String dataHoraAmigavel = dataHora.format(DateTimeFormatter.ofPattern("EEEE, dd 'de' MMMM 'de' yyyy 'às' HH:mm"));
+// Exemplo: quinta-feira, 28 de março de 2024 às 15:30
+```
+
+## 9.4. Formatação com Locale Específico
+
+```java
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
+LocalDate data = LocalDate.now();
+
+// Formatação em português
+DateTimeFormatter formatadorPtBr = DateTimeFormatter.ofPattern("EEEE, dd 'de' MMMM 'de' yyyy", new Locale("pt", "BR"));
+String dataPortugues = data.format(formatadorPtBr);
+// Exemplo: quinta-feira, 28 de março de 2024
+
+// Formatação em inglês
+DateTimeFormatter formatadorEn = DateTimeFormatter.ofPattern("EEEE, MMMM dd, yyyy", Locale.ENGLISH);
+String dataIngles = data.format(formatadorEn);
+// Exemplo: Thursday, March 28, 2024
+```
+
+## 9.5. Conversão de Timestamp para Texto
+
+```java
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+
+Instant timestamp = Instant.now();
+
+DateTimeFormatter formatadorTimestamp = DateTimeFormatter
+    .ofPattern("dd/MM/yyyy HH:mm:ss")
+    .withZone(ZoneId.systemDefault());
+
+String timestampTexto = formatadorTimestamp.format(timestamp);
+// Exemplo: 28/03/2024 15:30:45
+```
+
+## 9.6. Padrões Comuns de Formatação
+
+| Símbolo | Significado | Exemplo |
+|---------|-------------|---------|
+| `yyyy`  | Ano com 4 dígitos | 2024 |
+| `MM`    | Mês com 2 dígitos | 03 |
+| `dd`    | Dia do mês | 28 |
+| `HH`    | Hora (24h) | 15 |
+| `mm`    | Minutos | 30 |
+| `ss`    | Segundos | 45 |
+| `EEEE`  | Nome completo do dia | quinta-feira |
+| `MMMM`  | Nome completo do mês | março |
+
+## 9.7. Boas Práticas
+
+- Use `DateTimeFormatter` para conversões
+- Especifique sempre o Locale para evitar problemas de internacionalização
+- Prefira formatos consistentes em sua aplicação
+- Trate possíveis exceções de formatação
+
+## 9.8. Tratamento de Exceções
+
+```java
+try {
+    LocalDate data = LocalDate.now();
+    String dataFormatada = data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+} catch (DateTimeException e) {
+    // Trate erros de formatação
+    System.err.println("Erro ao formatar data: " + e.getMessage());
+}
+```
+
+## 9.9. Referências Adicionais
+
+- [Java DateTimeFormatter Documentation](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)
+- [Guia Completo de Formatação de Datas](https://www.baeldung.com/java-datetimeformatter)
